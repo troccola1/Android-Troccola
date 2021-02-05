@@ -42,62 +42,40 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout, fragmentHotel);
                 fragmentTransaction.commit();
-                actionBar.setDisplayHomeAsUpEnabled(true);
-                actionBar.setTitle("Hotel");
-                hotel.setVisibility(View.GONE);
-                hospital.setVisibility(View.GONE);
-                atm.setVisibility(View.GONE);
-                metro.setVisibility(View.GONE);
             }
         });
 
-        hotel.setOnClickListener(new View.OnClickListener() {
+        // Nút hình ảnh hospital
+        hospital.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout, fragmentHospital);
                 fragmentTransaction.commit();
-                actionBar.setDisplayHomeAsUpEnabled(true);
-                actionBar.setTitle("Hotel");
-                hotel.setVisibility(View.GONE);
-                hospital.setVisibility(View.GONE);
-                atm.setVisibility(View.GONE);
-                metro.setVisibility(View.GONE);
             }
         });
 
-        hotel.setOnClickListener(new View.OnClickListener() {
+        // Nút hình ảnh atm
+        atm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout, fragmentAtm);
                 fragmentTransaction.commit();
-                actionBar.setDisplayHomeAsUpEnabled(true);
-                actionBar.setTitle("Hotel");
-                hotel.setVisibility(View.GONE);
-                hospital.setVisibility(View.GONE);
-                atm.setVisibility(View.GONE);
-                metro.setVisibility(View.GONE);
             }
         });
 
-        hotel.setOnClickListener(new View.OnClickListener() {
+        // Nút hình ảnh metro
+        metro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout, fragmentMetro);
                 fragmentTransaction.commit();
-                actionBar.setDisplayHomeAsUpEnabled(true);
-                actionBar.setTitle("Hotel");
-                hotel.setVisibility(View.GONE);
-                hospital.setVisibility(View.GONE);
-                atm.setVisibility(View.GONE);
-                metro.setVisibility(View.GONE);
             }
         });
     }
-
 }
