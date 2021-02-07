@@ -29,8 +29,14 @@ public class HospitalFragment extends Fragment {
                 "78 – Đường Giải Phóng – Phương Mai – Đống Đa – Hà Nội"));
         hospitalList.add(new Item(R.drawable.hospital, "Bệnh Viện Hữu Nghị",
                 "Số 1 – Trần Khánh Dư – Quận Hai Bà Trưng – Hà Nội"));
+        hospitalList.add(new Item(R.drawable.hospital, "Bệnh Viện E, Hà Nội",
+                "89 - Trần Cung - Nghĩa Tân - Cầu Giấy - hà Nội"));
+        hospitalList.add(new Item(R.drawable.hospital, "Viện Răng Hàm Mặt",
+                "40B - Tràng Thi - Hoàn Kiếm - Hà Nội"));
         hospitalList.add(new Item(R.drawable.hospital, "Bệnh Viện Tai Mũi Họng Trung Ương",
                 "78 – Đường Giải Phóng – Quận Đống Đa – Hà Nội"));
+        hospitalList.add(new Item(R.drawable.hospital, "Bệnh Viện Mắt Trung Ương",
+                "85 - Phố Bà Triệu - Quận Hai Bà Trưng - Hà Nội"));
         // Declare the class MyAdapter object adapter
         MyAdapter adapter = new MyAdapter(getContext(), R.layout.mylist, hospitalList);
         simpleList.setAdapter(adapter);
@@ -46,12 +52,23 @@ public class HospitalFragment extends Fragment {
                             Toast.LENGTH_SHORT).show();
                 }
                 if (i == 2) {
+                    Toast.makeText(getContext(), "89 - Trần Cung - Nghĩa Tân - Cầu Giấy - hà Nội",
+                            Toast.LENGTH_SHORT).show();
+                }
+                if (i == 3) {
+                    Toast.makeText(getContext(), "40B - Tràng Thi - Hoàn Kiếm - Hà Nội",
+                            Toast.LENGTH_SHORT).show();
+                }
+                if (i == 4) {
                     Toast.makeText(getContext(), "78 – Đường Giải Phóng – Quận Đống Đa – Hà Nội",
+                            Toast.LENGTH_SHORT).show();
+                }
+                if (i == 5) {
+                    Toast.makeText(getContext(), "85 - Phố Bà Triệu - Quận Hai Bà Trưng - Hà Nội",
                             Toast.LENGTH_SHORT).show();
                 }
             }
         });
         return view;
     }
-
 }

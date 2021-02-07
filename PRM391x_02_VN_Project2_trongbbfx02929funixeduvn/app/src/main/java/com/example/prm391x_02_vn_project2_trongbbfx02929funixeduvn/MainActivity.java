@@ -1,12 +1,15 @@
 package com.example.prm391x_02_vn_project2_trongbbfx02929funixeduvn;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -42,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout, fragmentHotel);
                 fragmentTransaction.commit();
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setTitle("Hotel");
+                hotel.setVisibility(View.GONE);
+                hospital.setVisibility(View.GONE);
+                atm.setVisibility(View.GONE);
+                metro.setVisibility(View.GONE);
             }
         });
 
@@ -53,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout, fragmentHospital);
                 fragmentTransaction.commit();
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setTitle("Hospital");
+                hotel.setVisibility(View.GONE);
+                hospital.setVisibility(View.GONE);
+                atm.setVisibility(View.GONE);
+                metro.setVisibility(View.GONE);
             }
         });
 
@@ -64,6 +79,12 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout, fragmentAtm);
                 fragmentTransaction.commit();
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setTitle("Atm");
+                hotel.setVisibility(View.GONE);
+                hospital.setVisibility(View.GONE);
+                atm.setVisibility(View.GONE);
+                metro.setVisibility(View.GONE);
             }
         });
 
@@ -75,7 +96,21 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout, fragmentMetro);
                 fragmentTransaction.commit();
+                actionBar.setDisplayHomeAsUpEnabled(true);
+                actionBar.setTitle("Metro");
+                hotel.setVisibility(View.GONE);
+                hospital.setVisibility(View.GONE);
+                atm.setVisibility(View.GONE);
+                metro.setVisibility(View.GONE);
             }
         });
+    }
+
+    // Phương thức quay lại phần menu
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivityForResult(intent, 0);
+        return true;
     }
 }

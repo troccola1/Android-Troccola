@@ -10,6 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/list_hospital"
-        android:background="@color/yellow"/>
+        android:background="@color/tomato"/>
 
 </RelativeLayout>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
@@ -17,14 +16,14 @@
         android:id="@+id/textViewTitle"
         android:textStyle="bold"
         android:textSize="@dimen/text_title"
-        android:layout_toEndOf="@+id/imageView"
-        tools:ignore="RtlCompat" />
+        android:layout_toEndOf="@+id/imageView"/>
 
     <TextView
         android:id="@+id/subTextViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewTitle"
+        android:layout_toEndOf="@+id/imageView"
         android:textSize="@dimen/text" />
 
 </RelativeLayout>

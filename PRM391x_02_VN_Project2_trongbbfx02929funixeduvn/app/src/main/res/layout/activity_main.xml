@@ -8,6 +8,7 @@
         android:id="@+id/image_view"
         android:layout_width="@dimen/image_width"
         android:layout_height="@dimen/image_height"
+        android:contentDescription="@string/vietnam"
         android:src="@drawable/vietnam"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/activity_vertical_margin"/>
@@ -27,47 +28,53 @@
         android:layout_width="@dimen/image_button_width"
         android:layout_height="@dimen/image_button_height"
         android:layout_below="@id/text_view"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/hotel"
-        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+        android:layout_marginTop="@dimen/marginTop_2"
+        android:layout_marginLeft="@dimen/marginLeft_2"
+        android:contentDescription="@string/hotel"
+        android:src="@drawable/hotel" />
 
     <TextView
+        android:id="@+id/text_view1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/text_view1"
-        android:textSize="@dimen/text"
-        android:text="@string/hotel"
         android:layout_below="@id/image_button_hotel"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/marginLeft_2_text"
+        android:contentDescription="@string/hotel"
+        android:text="@string/hotel"
+        android:textSize="@dimen/text" />
 
     <ImageButton
         android:id="@+id/image_button_hospital"
         android:layout_width="@dimen/image_button_width"
         android:layout_height="@dimen/image_button_height"
         android:layout_below="@id/text_view1"
-        android:src="@drawable/hospital"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+        android:layout_marginTop="@dimen/marginTop_1"
+        android:layout_marginLeft="@dimen/marginLeft_1"
+        android:contentDescription="@string/hospital"
+        android:src="@drawable/hospital" />
 
     <TextView
         android:id="@+id/text_view2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/image_button_hospital"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/marginLeft_1"
+        android:contentDescription="@string/hospital"
         android:text="@string/hospital"
-        android:textSize="@dimen/text"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+        android:textSize="@dimen/text" />
 
     <ImageButton
+        android:id="@+id/image_button_atm"
         android:layout_width="@dimen/image_button_width"
         android:layout_height="@dimen/image_button_height"
         android:layout_below="@id/text_view2"
-        android:id="@+id/image_button_atm"
-        android:src="@drawable/atm_machine"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+        android:layout_marginTop="@dimen/marginTop_3"
+        android:layout_marginLeft="@dimen/marginLeft_2"
+        android:contentDescription="@string/atm"
+        android:src="@drawable/atm_machine" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,7 +82,8 @@
         android:textSize="@dimen/text"
         android:text="@string/atm"
         android:layout_below="@id/image_button_atm"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/marginLeft_2_text"
+        android:contentDescription="@string/atm"
         android:layout_marginTop="@dimen/activity_vertical_margin"/>
 
     <ImageButton
@@ -83,24 +91,26 @@
         android:layout_width="@dimen/image_button_width"
         android:layout_height="@dimen/image_button_height"
         android:layout_below="@id/text_view3"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/metro"
-        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+        android:layout_marginTop="@dimen/marginTop_4"
+        android:layout_marginLeft="@dimen/marginLeft_1"
+        android:contentDescription="@string/metro"
+        android:src="@drawable/metro" />
 
     <TextView
+        android:id="@+id/text_view4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/text_view4"
-        android:textSize="@dimen/text"
-        android:text="@string/metro"
         android:layout_below="@id/image_button_metro"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+        android:layout_marginLeft="@dimen/marginLeft_4_text"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:contentDescription="@string/metro"
+        android:text="@string/metro"
+        android:textSize="@dimen/text" />
 
     <LinearLayout
-        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
-
+        android:id="@+id/layout"
+        android:orientation="vertical">
+    </LinearLayout>
 </RelativeLayout>

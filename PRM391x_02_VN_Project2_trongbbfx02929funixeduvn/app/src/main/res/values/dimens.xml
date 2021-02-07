@@ -10,4 +10,14 @@
     <dimen name="activity_horizontal_margin">20dp</dimen>
     <dimen name="padding">5dp</dimen>
     <dimen name="margin">20dp</dimen>
+    <dimen name="marginTop_1">-85dp</dimen>
+    <dimen name="marginLeft_1">100dp</dimen>
+    <dimen name="marginTop_2">15dp</dimen>
+    <dimen name="marginLeft_2">250dp</dimen>
+    <dimen name="marginLeft_2_text">255dp</dimen>
+
+    <dimen name="marginTop_3">50dp</dimen>
+
+    <dimen name="marginTop_4">-90dp</dimen>
+    <dimen name="marginLeft_4_text">105dp</dimen>
 </resources>

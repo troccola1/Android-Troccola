@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class HotelFragment extends Fragment {
     // Khai báo list view(danh sách)
     ListView simpleList;
-    // // Khai báo metro list(danh sách)
+    // Khai báo metro list(danh sách)
     ArrayList<Item> hotellList = new ArrayList<Item>();
 
     // Return a View component
@@ -29,6 +29,13 @@ public class HotelFragment extends Fragment {
                 "13-15 Luong Ngoc Quyen, Hang Buom, Hoan Kiem, Hàng Buồm, Quận Hoàn Kiếm, Hà Nội, Việt Nam"));
         hotellList.add(new Item(R.drawable.hotel, "Church Legend Hotel Hanoi",
                 "46 Ấu Triệu, Phường Hàng Trống, Quận Hoàn Kiếm, Hà Nội, Việt Nam"));
+        hotellList.add(new Item(R.drawable.hotel, "Little Hanoi Diamond Hotel",
+                "11 Bát Đàn, Quận Hoàn Kiếm, Hàng Bồ, Quận Hoàn Kiếm, Hà Nội Việt Nam"));
+        hotellList.add(new Item(R.drawable.hotel, "Flamingo Dai Lai Resort",
+                "Thôn Ngọc Quang, Xã Ngọc Thanh, Vĩnh Phúc, Phúc Yên, Hà Nội, Việt Nam"));
+        hotellList.add(new Item(R.drawable.hotel, "Anman Legend Hotel",
+                "27 Hàng Bè, Hàng Bạc, Quận Hoàn Kiếm, Hà Nội, Việt Nam"));
+
         // Khai báo lớp MyAdapter đối tượng myAdapter
         MyAdapter myAdapter = new MyAdapter(getContext(),R.layout.mylist,hotellList);
         simpleList.setAdapter(myAdapter);
@@ -45,6 +52,20 @@ public class HotelFragment extends Fragment {
                 }
                 if (i == 2) {
                     Toast.makeText(getContext(), "46 Ấu Triệu, Phường Hàng Trống, Quận Hoàn Kiếm, Hà Nội, Việt Nam",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+
+                if (i == 3) {
+                    Toast.makeText(getContext(), "11 Bát Đàn, Quận Hoàn Kiếm, Hàng Bồ, Quận Hoàn Kiếm, Hà Nội Việt Nam",
+                            Toast.LENGTH_SHORT).show();
+                }
+                if (i == 4) {
+                    Toast.makeText(getContext(), "Thôn Ngọc Quang, Xã Ngọc Thanh, Vĩnh Phúc, Phúc Yên, Hà Nội, Việt Nam",
+                            Toast.LENGTH_SHORT).show();
+                }
+                if (i == 5) {
+                    Toast.makeText(getContext(), "27 Hàng Bè, Hàng Bạc, Quận Hoàn Kiếm, Hà Nội, Việt Nam",
                             Toast.LENGTH_SHORT).show();
                 }
             }
