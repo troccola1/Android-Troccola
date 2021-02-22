@@ -66,7 +66,8 @@ public class MyDbHelper extends SQLiteOpenHelper {
         values.put(KEY_ADDRESS, student.getAddress());
         values.put(KEY_PHONE_NUMBER, student.getPhone_number());
 
-        db.update(TABLE_NAME, values, KEY_ID + " = ?", new String[]{String.valueOf(student.getId())});
+        db.update(TABLE_NAME, values, KEY_ID + " = ?",
+                new String[]{String.valueOf(student.getId())});
         db.close();
     }
 }

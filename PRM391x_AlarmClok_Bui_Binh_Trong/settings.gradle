@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "PRM391x_AlarmClok_Bui_Binh_Trong"

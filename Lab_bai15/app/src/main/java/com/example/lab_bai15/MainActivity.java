@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 Student student1 = mDB.getStudent(1);
                 student.setName("Bui Van A");
                 mDB.updateStudent(student);
-
+0
                 String name = mDB.getStudent(1).getName();
                 tvName.setText(name);
             }
