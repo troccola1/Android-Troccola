@@ -36,17 +36,32 @@ public class AddAlarmActivity extends AppCompatActivity {
                 AlarmManager.class);
 
 
+
         btnHenGio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 calendar.set(Calendar.HOUR_OF_DAY, timePicker.getCurrentHour());
                 calendar.set(Calendar.MINUTE, timePicker.getCurrentMinute());
 
+                int gio = timePicker.getCurrentHour();
+                int phut = timePicker.getCurrentMinute();
+
+                String string_gio = String.valueOf(gio);
+                String string_phut = String.valueOf(phut);
+
+                if (gio > 12) {
+                    string_gio = String.valueOf(gio - 12);
+                }
+                if (phut < 10) {
+                    string_phut = "0" + String.valueOf(phut);
+                }
+
+
                 pendingIntent = PendingIntent.getBroadcast(
-                        AddAlarmActivity.this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT
+                        AddAlarmActivity.this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT
                 );
                 alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
-
+                txtHienThi.setText("Giờ bạn đặt là " + string_gio + ":" + string_phut);
             }
         });
 
