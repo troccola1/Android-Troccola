@@ -32,11 +32,7 @@ public class AddAlarmActivity extends AppCompatActivity {
         timePicker = (TimePicker) findViewById(R.id.timePicker);
         calendar = Calendar.getInstance();
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        Intent intent = new Intent(AddAlarmActivity.this,
-                AlarmManager.class);
-
-
-
+        Intent intent = new Intent(AddAlarmActivity.this, AlarmReceiver.class);
         btnHenGio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +52,7 @@ public class AddAlarmActivity extends AppCompatActivity {
                     string_phut = "0" + String.valueOf(phut);
                 }
 
+                intent.putExtra("extra", "on");
 
                 pendingIntent = PendingIntent.getBroadcast(
                         AddAlarmActivity.this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT
@@ -69,7 +66,9 @@ public class AddAlarmActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 txtHienThi.setText("Dừng lại");
-                pendingIntent.cancel();
+                alarmManager.cancel(pendingIntent);
+                intent.putExtra("extra", "off");
+                sendBroadcast(intent);
             }
 
         });
