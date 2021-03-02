@@ -2,13 +2,25 @@ package com.example.prm391x_alarmclok_bui_binh_trong;
 
 import java.io.Serializable;
 
+/**
+ * this is Alarm class present for alarm object implements
+ * Serializable to support in transfer object Alarm
+ * through intent
+ */
+
 public class Alarm implements Serializable {
+    // alarm's id this was create at the adding time
     private int mId;
+    // alarm's hour
     private int mHour;
+    // alarm's minute
     private int mMinute;
+    // alarm's name
     private String mAlarmName;
+    // alarm's on off
     private int mOnOff;
 
+    // TODO: first constructor is used at the import data from database
     Alarm(int mId, int mHour, int mMinute, String mAlarmName, int mOnOff) {
         this.setmId(mId);
         this.setmHour(mHour);
@@ -17,19 +29,12 @@ public class Alarm implements Serializable {
         this.setmOnOff(mOnOff);
     }
 
+    // TODO: second constructor is used at the add or edit time in the initAlarm method
     Alarm(int mHour, int mMinute, String mAlarmName, int mOnOff) {
         this.setmHour(mHour);
         this.setmMinute(mMinute);
         this.setmAlarmName(mAlarmName);
         this.setmOnOff(mOnOff);
-    }
-
-    public int getmId() {
-        return mId;
-    }
-
-    public void setmId(int mId) {
-        this.mId = mId;
     }
 
     public int getmHour() {
@@ -62,5 +67,13 @@ public class Alarm implements Serializable {
 
     public void setmOnOff(int mOnOff) {
         this.mOnOff = mOnOff;
+    }
+
+    public int getmId() {
+        return mId;
+    }
+
+    public void setmId(int mId) {
+        this.mId = mId;
     }
 }
