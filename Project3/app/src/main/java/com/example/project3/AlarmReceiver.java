@@ -12,7 +12,6 @@ public class AlarmReceiver extends BroadcastReceiver {
         String chuoi_string = intent.getExtras().getString("extra");
         Log.e("Ban Truyen Key", chuoi_string);
 
-
         Intent myIntent = new Intent(context,Music.class);
         myIntent.putExtra("extra", chuoi_string);
         context.startService(myIntent);

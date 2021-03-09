@@ -25,7 +25,6 @@ public class AddAlarmActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_alarm);
-
         btnHenGio = (Button) findViewById(R.id.btnHenGio);
         btnDungLai = (Button) findViewById(R.id.btnDungLai);
         txtHienThi = (TextView) findViewById(R.id.textView);
@@ -59,6 +58,8 @@ public class AddAlarmActivity extends AppCompatActivity {
                 );
                 alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
                 txtHienThi.setText("Giờ bạn đặt là " + string_gio + ":" + string_phut);
+                //luu lai thong tin vao local db sqlite
+                // alarm - id/ gio / phut
             }
         });
 
